@@ -11,7 +11,8 @@ class PlacesController < ApplicationController
   def new
   end
 
-  def submitted
+  # def submitted
+  def create
     Place.create title: params[:title],
                  price: (params[:price].to_f * 100).to_i,
                  photo_url: params[:url],
